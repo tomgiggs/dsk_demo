@@ -12,9 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron-forge": "^5.2.4",
-    "electron-packager": "^14.0.2"
-  },
-  "dependencies": {
+    "electron-packager": "^14.0.2",
     "electron": "^5.0.7"
   }
 }
