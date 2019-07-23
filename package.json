@@ -1,18 +1,29 @@
 {
-  "name": "hellodesktop",
+  "name": "dsk_demo",
   "version": "1.0.0",
   "description": "electron demo",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "package": "electron-packager ./ dsk_demo --out ./dist --app-version 1.0.0 --overwrite"
+    "package": "electron-packager ./ dsk_demo --out ./dist --app-version 1.0.0 --overwrite",
+    "dist": "electron-builder --win --x64"
   },
+  "build": {
+    "appId": "com.demo.app",
+    "mac": {
+      "target": ["dmg","zip"]
+    },
+    "win": {
+      "target": ["nsis","zip"]
+    }
+},
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "electron": "^5.0.7",
+    "electron-builder": "^21.1.1",
     "electron-forge": "^5.2.4",
-    "electron-packager": "^14.0.2",
-    "electron": "^5.0.7"
+    "electron-packager": "^14.0.2"
   }
 }
